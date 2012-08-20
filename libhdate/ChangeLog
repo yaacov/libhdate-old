@@ -1,0 +1,230 @@
+libhdate (1.4.20)
+
+  * Update pascal class example (Patch: Ido Kanner)
+  * Update perl and php examples to use hdate objets
+  * Fix PHP install dirs, and add hdate.php to the include path
+  * Fix hdate man page
+  
+  -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 5 Nov 2010 10:00
+
+libhdate (1.4.18)
+
+  * Fix longitude positive and negative directions.
+  * in the hdate example make the times printout more verbose
+  * Add sfirat ha omer to the hdate example (Patch: Amiad Bareli)
+  * Add 'bet' in front of the month name in hebrew (Patch: Amiad Bareli)
+  
+  -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 26 Oct 2010 22:00
+  
+libhdate (1.4.14)
+
+  * Fix --localedir configure option and add a gettext localedir indicator
+  	at the configure summary
+  * Add Sfirat ha omer function (Patch: Moshe Wagner <moshe.wagner@gmail.com>)
+  * Add Erev Yum Kipur to the holidays list 
+  	(Bug report: Arnon Sharlin; Patch: Moshe Wagner <moshe.wagner@gmail.com>)
+  * Fix Tora readings in diaspora (Patch: Moshe Wagner <moshe.wagner@gmail.com>)
+  * Change the type of holiday function to me more descriptive
+  	(Patch: Moshe Wagner <moshe.wagner@gmail.com>)
+  	
+  -- Yaacov Zamir <kzamir@wall.co.il>  Saturday, 17 Oct 2008 22:00
+  
+libhdate (1.4.12)
+
+  * Add GNU Pascal bindings (Ido Kanner)
+  * Add example for GNU pascal
+  * change configure flags for pascal from --disable-pascal
+      to --disable-fpc and --disable-gpc
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Saturday, 14 Jun 2008 22:00
+  
+libhdate (1.4.11)
+
+  * Add Ruby bindings
+  * Add PHP bindings
+  * Add GPL notice to the example files (Bug report: Baruch Even)
+  * Add a patch to print todays date in hcal in bold (Patch: Patrik Nilsson)
+  * Fix documentation of files and structs (Bug report: Baruch Even)
+  * Update Swedish translation (Thanks: Patrik Nilsson)
+  * Fix hdate_get_utc_sun_time_deg 
+      function only work in low altitudes (Bug report: Ido Kanner)
+  * Update pascal bindings and examples (Patch: Ido Kanner)
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Saturday, 5 Jan 2008 22:00
+  
+libhdate (1.4.10)
+
+  * Move to GPL3 (COPYING, AUTHORS)
+      - Add Amos Shapir as author in Authors file
+      - Update Amos's email
+  * Change defult config options (configure.in)
+      - Gettext version used now is 0.17
+      - Python, Perl, Pascal bindings now built by default
+  * Update the man files (docs/man)
+      - add man files for c++ language
+      - move all man files to docs/man directory
+  * Bug fixes
+      - Fix Kislev Hebrew translation misspell (Bug report: Ariel Galola)
+      - Fix Julian day calculation (Bug report: Afonso Arantes)
+  * Add new events
+      - 30 shvat : Family day
+      - 12 heshvan : rabin memorial day
+      - 29 tamuz : zhabotinsky day
+  * Changes to hdate command line utility
+      - flag -j print the Julian day number
+      - if argument is greater than 100000 it is asumed as Julian day number
+      - "hdate -S YEAR" now print out same format as "hebcal -d -h -e YEAR"
+  
+  -- Yaacov Zamir <kzamir@wall.co.il>  Thusday, 3 January 2008 22:00
+
+libhdate (1.4.9)
+
+  * Fix endianess bug in big endian machins (/examples/hcal/hcal.c and hdate.c)
+	
+  -- Yaacov Zamir <kzamir@wall.co.il>  Saturday, 7 April 2007 22:00
+
+libhdate (1.4.8)
+
+  * Fix help printing bug: Add new line at the end of hdate help text.
+  * Add two new functios to the time of day section:
+      hdate_get_utc_sun_time_full - gets the time of first light,
+      talit, sunris, sunset, first stars and three stars.
+      hdate_get_utc_sun_time_deg - gets the time the sun is on
+      some known altitude.
+  * Add Times of day to hdate command line tool.
+     supported times: first-light, talit, sunrise, mid-day, sunset, first-stars
+     and three-stars
+  * Add Times of Shabat enter/leave to hdate command line tool.
+     Shabat starts 20 min before sunset, and leave at three stars.
+  * Add new oprions in hdate command line tool to it's man page
+	
+  -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 8 Jun 2006 12:13
+  
+libhdate (1.4.7)
+
+  * Fix pesach II in hebrew po file.
+  * hcal utility export strict html 4.01.
+  * hcal utility can export diaspora holidays
+  * Update hcal utility man file.
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 18 Apr 2006 12:13
+
+libhdate (1.4.3)
+
+  * Fix header of spanish po file.
+  * Daniel Nylander: Swedish translation.
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Mon, 10 Apr 2006 12:13
+  
+libhdate (1.4.2)
+
+  * Ido Kanner <idokan@gmail.com> - Update free pascal bindings.
+  * Update address of Free Software Foundation in COPYING file.
+  * make the spec.in file more configurable.
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Fri, 25 Nov 2005 12:13
+  
+libhdate (1.4.0)
+
+  * Michael Kaminsky - libhdate now reports the 2nd day of yom
+    tov on Sukkot and Peseach as Yom Tov and not Chol Hamoed.
+  * Cange C++ API - insert the location and diaspora flag as
+    part of the hdate object.
+  * Docomentation - separate the c and the cpp docs, more readable.
+  * hdate example can now export iCal formated output.
+
+  -- Yaacov Zamir <kzamir@wall.co.il>  Mon, 8 Aug 2005 22:13
+  
+libhdate (1.3.1)
+
+  * Add "const correctness" patch from Markus Elfring (elfring).
+  * Manual page seems to contain a hyphen where a minus sign was 
+intended, patch by Lior Kaplan.
+  * Remove the debian directory from the ziped package.
+
+    -- Yaacov Zamir <kzamir@wall.co.il>  Sat, 30 Jul 2005 22:13
+
+libhdate (1.3.0)
+
+  * Add examples to the doc directory
+  * doc directory is now /usr/doc/libhdate0 and no /usr/doc/hdate
+  * make int_to_string aware of LANGUAGE system variable, make it more gettext compatible
+
+    -- Yaacov Zamir <kzamir@wall.co.il>  Wed, 27 Jul 2005 18:13
+
+libhdate (1.0.1)
+
+  * first major reales number.
+  * start to number the shared library.
+  * stable api.
+  * updated utility programs hdate/hcal.
+  * added man files for library and utility programs.
+  * python and perl bindings.
+  * free pascal binding by Ido Kanner <idokan@gmail.com>
+  * ru, fr, he, es translations, thanks to Peled Esti and Boris Peterberg.
+  * added debian dir and RH spec file for easy packing, thanks to Oron Peled.
+
+    -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 08 March 2005 18:13
+    
+libhdate (0.30.0)
+
+  * add es_MX translation by Peled Esti <esti@actcom.co.il>  
+  * initial russian translation by Boris Peterberg
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Tue, 08 March 2005 18:13
+       
+libhdate (0.30.0)
+
+  * cpp, python and perl bindings
+  * examples for the new libhdate bindings 
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Fri, 04 March 2005 15:19:29
+
+libhdate (0.22.0)
+
+  * Michael Kaminsky's patch to Shavot II on diaspora reading.
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Mon, 28 Feb 2005 08:12:31
+
+libhdate (0.22.0)
+
+  * New hebcal examples
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Fri, 25 Feb 2005 11:15:18
+   
+libhdate (0.21.0)
+  
+  * New spec file by Oron Peled
+  * Diaspora holydays/readings
+  * New sunrise sunset functions
+  * New html examples
+  * New configure options to build / not build the examples
+  
+   -- Yaacov Zamir <kzamir@wall.co.il>  Fri, 25 Feb 2005 11:15:18
+
+libhdate (0.17.0)
+  
+  * API chages.
+  * base struct change.
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Mon, 22 Feb 2005 19:34:22
+   
+libhdate (0.16.3)
+  
+  * Try to fix date conversion bug, thanks Michael Kaminsky.
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Mon, 21 Feb 2005 09:03:12
+
+libhdate (0.16.2)
+  
+  * Syntax error, and weeks calculation bug fixed by Michael Kaminsky.
+
+   -- Yaacov Zamir <kzamir@wall.co.il>  Sun, 20 Feb 2005 06:53:12
+
+libhdate (0.16.1)
+
+  * Fix locale bug in int_to_string.
+  * Add examples directory.
+  * Minor bug fixes.
+
+ -- Yaacov Zamir <kzamir@wall.co.il>  Sat, 19 Feb 2005 20:07:19

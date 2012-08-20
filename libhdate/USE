@@ -1,0 +1,50 @@
+use:
+----
+gcc -c `pkg-config --cflags libhdate` <your code>.c 
+gcc `pkg-config --libs libhdate` <your code>.o -o <program name>
+
+
+  if you dont have pkg-config:
+  ----------------------------
+
+  gcc -c <your code>.c 
+  gcc -lm -lhdate <your code>.o -o <program name>
+
+  
+kobi zamir <kzamir@walla.co.il>
+-------------------------------------
+
+-------------------------------
+example code:
+file: test.c
+-------------------------------
+
+#include <stdio.h>
+#include <hdate.h>
+
+#define TRUE  1
+#define FALSE 0
+
+int
+main()
+{
+	hdate_struct	*h;	
+
+	h = hdate_hdate( 0,0,0);
+	
+	printf ("%s\n", hdate_get_format_date (h, FALSE) );
+	
+	return 0;
+}
+
+--------------------------------
+compile:
+--------------------------------
+
+gcc -lm -lhdate test.c -o test
+
+--------------------------------
+run:
+--------------------------------
+
+./test

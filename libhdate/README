@@ -1,0 +1,73 @@
+Libhdate - 
+
+LibHdate is a small C,C++ library for Hebrew calendar, dates, holidays, and reading sequence
+
+This library of functions are using the sorce code from
+Amos Shapir's "hdate" package fixed and patched by Nadav Har'El.
+See the original package's README (hdate_README)
+
+LibHdate is a small C,C++ library for Hebrew dates,
+holidays, and reading sequence (parasha). It is using 
+the sorce code from Amos Shapir's "hdate" package fixed and 
+patched by Nadav Har'El. The Torah reading sequence
+is from tables by Zvi Har'El.
+
+15 Adar II 5763 Shusan Purim, 19 March 2003
+kobi zamir <kzamir@walla.co.il>
+-------------------------------------
+
+see USE file for usage.
+
+-------------------------------------
+-------------------------------------
+
+Below is the original README file from hdate 0.5p by Amos Shapir.
+
+--------------------------------------
+
+This is Amos Shapir's "hdate" package fixed and patched by Nadav Har'El.
+Below is the original package's README - see NEWS for what changed.
+
+------------------------------------------------------------------------------
+This is the 5th distribution of hdate/hcal.  It should be portable
+anywhere, but for machines which have sizeof(int) != sizeof(long), you
+may have to change a few 'int's to 'long', and suffix 'L' to some
+constants; sorry, I have no way to tell which.  It also expects the UNIX
+"time.h" structures, but that shouldn't be hard to change to fit other
+systems.  If you port the code to any other system, please send the
+diffs to the author for inclusion in the next release.
+
+The files included  herein are:
+README - this file.
+explain - an explanation of the algorithm.
+hdate.6 - the man page (nroff/troff source).
+Makefile
+hdate.h - common definitions.
+hdate.c - main source file for hdate.
+hcal.c - main source file for hcal.
+hcom.c - code common to both hdate & hcal.
+
+Compilation options:
+
+HEBREW - make a version that prints on a Hebrew printer/terminal, given
+the "-h" flag.  All Hebrew words are initialized in left-to-right
+lower-case letters, and passed through the function rev() for
+conversion.  I have included a function which reverses them to
+right-to-left order, and optionally converts to the ISO-8859/8 standard
+or IBM representation.  You may need to write your own rev() function to
+convert to what your printer expects, or else delete it and pipe the
+output through "rev", "tr" or "sed".
+
+USA_DATE - make hdate accept the arguments as "month day year" instead
+of the default "day month year" (note that hdate.6 has to be changed to
+document this order).
+
+	Good Luck,
+	Amos Shapir
+July 1992 - Tamuz 5752
+
+Net: amos@cs.cs.huji.ac.il
+Paper: The Hebrew Univ. of Jerusalem, Dept. of Comp. Science.
+       Givat-Ram, Jerusalem 91904, Israel
+Tel: +972 2 585706               GEO: 35 11 46 E / 31 46 21 N
+
