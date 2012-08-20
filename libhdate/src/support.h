@@ -52,3 +52,22 @@
 #  define _(String) (String)
 #  define N_(String) (String)
 #endif
+
+/* 
+ * visual studio support
+ */
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
+
+#ifndef M_PI
+#define M_PI 3.14159265359
+#endif
+
+/*
+ * missing global config ?
+ */
+#ifndef PACKAGE
+#define PACKAGE "libhdate"
+#define VERSION "1.4"
+#endif

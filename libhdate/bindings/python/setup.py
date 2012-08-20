@@ -19,7 +19,12 @@ setup(
     url = "http://libhdate.sourceforge.net/",
     
     py_modules = ['hdate'],
-    ext_modules=[Extension('_hdate', ['../../src/deprecated.c','../../src/hdate_julian.c','../../src/hdate_strings.c',
-'../../src/hdate_holyday.c','../../src/hdate_parasha.c','../../src/hdate_sun_time.c','hdate_wrap.cxx'])],
-    
+    ext_modules=[Extension('_hdate', [
+        '../../src/hdate_julian.c', 
+        '../../src/hdate_strings.c', 
+        '../../src/hdate_holyday.c', 
+        '../../src/hdate_parasha.c',
+        '../../src/hdate_sun_time.c',
+        'hdate_wrap.cxx'
+    ])],
 )
